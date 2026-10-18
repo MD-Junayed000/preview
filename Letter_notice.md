@@ -108,9 +108,9 @@ Command `suppliers:send-repayment-sms`, scheduled daily at 10:00 AM Bangladesh t
 
 | Event | When | Text |
 | --- | --- | --- |
-| `reminder_3d` | due date = today + 3 | আপনার কিস্তি ৳X পরিশোধের শেষ তারিখ ৩ দিন পর, dd/mm। - Hishabee |
-| `reminder_1d` | due date = today + 1 | আপনার কিস্তি ৳X পরিশোধের শেষ তারিখ আগামীকাল, dd/mm। - Hishabee |
-| `due_today` | due date = today | আজ কিস্তি ৳X পরিশোধের শেষ দিন। আজই পরিশোধ করুন। - Hishabee |
+| `reminder_3d` | due date = today + 3 | প্রিয় [নাম] (আইডি: [আইডি]), আপনার কিস্তি ৳X পরিশোধের শেষ তারিখ ৩ দিন পর, dd/mm। - Hishabee |
+| `reminder_1d` | due date = today + 1 | প্রিয় [নাম] (আইডি: [আইডি]), আপনার কিস্তি ৳X পরিশোধের শেষ তারিখ আগামীকাল, dd/mm। - Hishabee |
+| `due_today` | due date = today | প্রিয় [নাম] (আইডি: [আইডি]), আজ কিস্তি ৳X পরিশোধের শেষ দিন। আজই পরিশোধ করুন। - Hishabee |
 
    Deduplicated by supplier + event + `reference_date` (the due date).
 
@@ -118,11 +118,20 @@ Command `suppliers:send-repayment-sms`, scheduled daily at 10:00 AM Bangladesh t
 
 | Event | Text |
 | --- | --- |
-| `notice_1_sms` | প্রথম সতর্কবার্তা: আপনার ৳[বকেয়ার পরিমাণ] টাকা গত [দিন] দিন ধরে বকেয়া রয়েছে। অবিলম্বে পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টে বকেয়ার তথ্য প্রতিফলিত হলে ভবিষ্যতে ব্যাংক ও আর্থিক প্রতিষ্ঠান থেকে ঋণসুবিধা গ্রহণে বাধা সৃষ্টি হতে পারে। পাশাপাশি আইনানুগ ব্যবস্থা নেওয়া হইবে। |
-| `notice_2_sms` | দ্বিতীয় সতর্কবার্তা: পূর্বের নোটিশ সত্ত্বেও আপনার ৳[বকেয়ার পরিমাণ] টাকা গত [দিন] দিন ধরে অপরিশোধিত রয়েছে। অবিলম্বে সম্পূর্ণ বকেয়া পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টে বকেয়ার তথ্য প্রতিফলিত হওয়া, ভবিষ্যৎ ঋণসুবিধায় বাধা এবং আইনানুগ ব্যবস্থার সম্মুখীন হইবেন। |
-| `notice_3_sms` | চূড়ান্ত সতর্কবার্তা: আপনার ৳[বকেয়ার পরিমাণ] টাকা গত [দিন] দিন ধরে বকেয়া রয়েছে। [শেষ তারিখ]-এর মধ্যে সম্পূর্ণ অর্থ পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টিংসহ আইনানুগ ব্যবস্থা এবং আপনার প্রদত্ত চেকের বিপরীতে চেক ডিজঅনার মামলা দেওয়া হইবে। ভবিষ্যৎ ঋণসুবিধাও বাধাগ্রস্ত হইবেন। |
+| `notice_1_sms` | প্রথম সতর্কবার্তা: প্রিয় [নাম] (আইডি: [আইডি]), পরিশোধের শেষ তারিখ [নির্ধারিত তারিখ] পার হয়েছে। আপনার ৳[বকেয়ার পরিমাণ] টাকা গত [দিন] দিন ধরে বকেয়া রয়েছে। অবিলম্বে পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টে বকেয়ার তথ্য প্রতিফলিত হলে ভবিষ্যতে ব্যাংক ও আর্থিক প্রতিষ্ঠান থেকে ঋণসুবিধা গ্রহণে বাধা সৃষ্টি হতে পারে। পাশাপাশি আইনানুগ ব্যবস্থা নেওয়া হইবে। |
+| `notice_2_sms` | দ্বিতীয় সতর্কবার্তা: প্রিয় [নাম] (আইডি: [আইডি]), পরিশোধের শেষ তারিখ [নির্ধারিত তারিখ] পার হয়েছে। পূর্বের নোটিশ সত্ত্বেও আপনার ৳[বকেয়ার পরিমাণ] টাকা গত [দিন] দিন ধরে অপরিশোধিত রয়েছে। অবিলম্বে সম্পূর্ণ বকেয়া পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টে বকেয়ার তথ্য প্রতিফলিত হওয়া, ভবিষ্যৎ ঋণসুবিধায় বাধা এবং আইনানুগ ব্যবস্থার সম্মুখীন হইবেন। |
+| `notice_3_sms` | চূড়ান্ত সতর্কবার্তা: প্রিয় [নাম] (আইডি: [আইডি]), পরিশোধের শেষ তারিখ [নির্ধারিত তারিখ] পার হয়েছে। আপনার ৳[বকেয়ার পরিমাণ] টাকা গত [দিন] দিন ধরে বকেয়া রয়েছে। [শেষ তারিখ]-এর মধ্যে সম্পূর্ণ অর্থ পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টিংসহ আইনানুগ ব্যবস্থা এবং আপনার প্রদত্ত চেকের বিপরীতে চেক ডিজঅনার মামলা দেওয়া হইবে। ভবিষ্যৎ ঋণসুবিধাও বাধাগ্রস্ত হইবেন। |
 
-   [বকেয়ার পরিমাণ] = `overdue_amount`, [দিন] = `dpd`, [শেষ তারিখ] = `dpd90_date` (`dd/mm/yyyy`), all in Bangla digits. Because the check is "this level not yet sent in this cycle", a missed daily run catches up the next day, and a supplier who jumps from DPD 10 to DPD 35 gets only notice 2's SMS.
+   All values are in Bangla digits:
+
+   | Placeholder | Filled with |
+   | --- | --- |
+   | [নাম] | `suppliers.name` (the `business_name` if the name is empty) |
+   | [আইডি] | Supplier `id` (the same ডিলার আইডি printed on the legal notice) |
+   | [নির্ধারিত তারিখ] | `due_date`: due date of the oldest overdue repayment, the one that has passed (`dd/mm/yyyy`) |
+   | [বকেয়ার পরিমাণ] | `overdue_amount` |
+   | [দিন] | `dpd` |
+   | [শেষ তারিখ] | `dpd90_date` (`dd/mm/yyyy`) | Because the check is "this level not yet sent in this cycle", a missed daily run catches up the next day, and a supplier who jumps from DPD 10 to DPD 35 gets only notice 2's SMS.
 
 **Sending.** `SMSService::smsSend($message, $phone, 'supplier_repayment_<event>', 0, $supplier, true)`, which tries Banglalink first, then GP, then Robi (see §3.2). The log row's `status`:
 
@@ -134,6 +143,37 @@ Command `suppliers:send-repayment-sms`, scheduled daily at 10:00 AM Bangladesh t
 | `dry_run` | `--dry-run`: no gateway is called. A dry run never blocks a later real send. |
 
 Real runs deduplicate on `sent` rows only. Dry runs deduplicate on `sent` and `dry_run` rows.
+
+### 1.4.1 What the supplier receives (example)
+
+Example: supplier **করিম উদ্দিন (ID 25)** has one repayment of ৳২২,২৬৪ due on **21/10/2026** and never pays it. All SMS go out in the 10:00 AM run on the dates below:
+
+| Date (10:00 AM) | DPD | Event | SMS the supplier receives |
+| --- | --- | --- | --- |
+| 18/10/2026 | due in 3 days | `reminder_3d` | প্রিয় করিম উদ্দিন (আইডি: ২৫), আপনার কিস্তি ৳২২,২৬৪ পরিশোধের শেষ তারিখ ৩ দিন পর, ২১/১০। - Hishabee |
+| 20/10/2026 | due tomorrow | `reminder_1d` | প্রিয় করিম উদ্দিন (আইডি: ২৫), আপনার কিস্তি ৳২২,২৬৪ পরিশোধের শেষ তারিখ আগামীকাল, ২১/১০। - Hishabee |
+| 21/10/2026 | due today | `due_today` | প্রিয় করিম উদ্দিন (আইডি: ২৫), আজ কিস্তি ৳২২,২৬৪ পরিশোধের শেষ দিন। আজই পরিশোধ করুন। - Hishabee |
+| 22/10 – 04/11/2026 | 1–14 | — | No SMS from this feature (the order block / app pop-up applies from DPD 1) |
+| 05/11/2026 | 15 | `notice_1_sms` | প্রথম সতর্কবার্তা: প্রিয় করিম উদ্দিন (আইডি: ২৫), পরিশোধের শেষ তারিখ ২১/১০/২০২৬ পার হয়েছে। আপনার ৳২২,২৬৪ টাকা গত ১৫ দিন ধরে বকেয়া রয়েছে। অবিলম্বে পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টে বকেয়ার তথ্য প্রতিফলিত হলে ভবিষ্যতে ব্যাংক ও আর্থিক প্রতিষ্ঠান থেকে ঋণসুবিধা গ্রহণে বাধা সৃষ্টি হতে পারে। পাশাপাশি আইনানুগ ব্যবস্থা নেওয়া হইবে। |
+| 20/11/2026 | 30 | `notice_2_sms` | দ্বিতীয় সতর্কবার্তা: প্রিয় করিম উদ্দিন (আইডি: ২৫), পরিশোধের শেষ তারিখ ২১/১০/২০২৬ পার হয়েছে। পূর্বের নোটিশ সত্ত্বেও আপনার ৳২২,২৬৪ টাকা গত ৩০ দিন ধরে অপরিশোধিত রয়েছে। অবিলম্বে সম্পূর্ণ বকেয়া পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টে বকেয়ার তথ্য প্রতিফলিত হওয়া, ভবিষ্যৎ ঋণসুবিধায় বাধা এবং আইনানুগ ব্যবস্থার সম্মুখীন হইবেন। |
+| 20/12/2026 | 60 | `notice_3_sms` | চূড়ান্ত সতর্কবার্তা: প্রিয় করিম উদ্দিন (আইডি: ২৫), পরিশোধের শেষ তারিখ ২১/১০/২০২৬ পার হয়েছে। আপনার ৳২২,২৬৪ টাকা গত ৬০ দিন ধরে বকেয়া রয়েছে। ১৯/০১/২০২৭-এর মধ্যে সম্পূর্ণ অর্থ পরিশোধ করুন। অন্যথায় প্রযোজ্য নিয়ম অনুযায়ী CIB রিপোর্টিংসহ আইনানুগ ব্যবস্থা এবং আপনার প্রদত্ত চেকের বিপরীতে চেক ডিজঅনার মামলা দেওয়া হইবে। ভবিষ্যৎ ঋণসুবিধাও বাধাগ্রস্ত হইবেন। |
+| After 20/12/2026 | 61+ | — | Nothing more; each notice SMS is sent once per cycle, including past DPD 90 |
+
+Rules behind the table:
+
+- **Amount (৳X / ৳[বকেয়ার পরিমাণ]):** Bangla digits with thousands separators. Paisa are shown only when non-zero (৳২২,২৬৪ but ৳২২,২৬৪.৫০).
+  - Reminders: the sum of all repayments due that same day, so two invoices due on 21/10 give one SMS with their total.
+  - Notice SMS: the total of **all** overdue repayments, not just the oldest one.
+- **[দিন]:** the supplier's DPD on the day it is sent, i.e. the oldest overdue repayment. If a run is missed, the next day's SMS says e.g. গত ১৬ দিন.
+- **[নাম] (আইডি: [আইডি]):** every SMS (reminders and notices) opens with the supplier's name and ID, so the supplier and the call centre can tell which account it is about.
+- **[নির্ধারিত তারিখ]:** in the notice SMS, the due date that has passed. That is the oldest overdue repayment's due date, the same date the DPD is counted from (21/10/2026 here).
+- **[শেষ তারিখ]:** oldest due date + 90 days (21/10/2026 + 90 = ১৯/০১/২০২৭).
+- **Several due dates:** each due date gets its own reminders. Notice SMS follow the highest DPD only (case a). A supplier who first becomes overdue at DPD 35 gets only notice 2's SMS.
+- **Paid in full:** the cycle resets (case b), and a later overdue starts again from notice 1.
+
+On the phone the text appears exactly as shown when Banglalink sends it (the first choice) or GP sends it. If it falls back to Robi, the SMS gets an extra first line "হিসাবী পুঁজি". `sms_send_histories` always stores the text with that "হিসাবী পুঁজি" line in front.
+
+To preview the real texts for today's data without sending anything, run `php artisan suppliers:send-repayment-sms --dry-run` and open `/supplier-notice-logs?channel=sms`.
 
 ### 1.5 Log
 
@@ -401,7 +441,7 @@ The supplier's repayment SMS that were actually sent (`status = sent`), plus the
       "event": "notice_3_sms",
       "level": 3,
       "notice_no": null,
-      "message": "চূড়ান্ত সতর্কবার্তা: আপনার ৳২৬,৩১২ টাকা গত ৯৫ দিন ধরে বকেয়া রয়েছে। ১৩/১০/২০২৬-এর মধ্যে সম্পূর্ণ অর্থ পরিশোধ করুন। ...",
+      "message": "চূড়ান্ত সতর্কবার্তা: প্রিয় [DEMO] Verified - DPD 95 (আইডি: ১০), পরিশোধের শেষ তারিখ ১৫/০৭/২০২৬ পার হয়েছে। আপনার ৳২৬,৩১২ টাকা গত ৯৫ দিন ধরে বকেয়া রয়েছে। ১৩/১০/২০২৬-এর মধ্যে সম্পূর্ণ অর্থ পরিশোধ করুন। ...",
       "dpd": 95,
       "amount": 26312,
       "reference_date": "2026-07-15",
@@ -434,9 +474,24 @@ The supplier's repayment SMS that were actually sent (`status = sent`), plus the
 | `reference_date` | Due date (reminders), oldest due date (notice SMS) or notice date |
 | `is_resolved` | `true` once the overdue was cleared and the cycle reset; show as history |
 
-## 6. Local testing
+## 6. Deploying to a server
 
-### 6.1 Setup
+`vendor/` is not in git. After pulling this code, mPDF must be installed on the server, otherwise the notice download fails with `Class "Mpdf\Config\ConfigVariables" not found`.
+
+```bash
+php -m | grep -Ei '^(gd|mbstring)$'                       # mPDF needs both extensions
+composer install --no-dev --optimize-autoloader --no-interaction   # installs mpdf/mpdf from composer.lock
+php artisan optimize:clear
+php artisan migrate --force                               # supplier_notice_logs
+chown -R www-data:www-data storage && chmod -R ug+rwX storage      # mPDF temp dir: storage/app/mpdf
+php artisan schedule:list                                 # suppliers:send-repayment-sms at 10:00; cron must run schedule:run every minute
+```
+
+Use `composer install` (exact versions from `composer.lock`), not `composer update`. `resources/fonts/` must be deployed too; it's committed with the code.
+
+## 7. Local testing
+
+### 7.1 Setup
 
 ```bash
 composer install            # mpdf/mpdf; on Windows add --ignore-platform-req=ext-pcntl --ignore-platform-req=ext-posix
@@ -458,7 +513,7 @@ The seeder needs at least one zone, supplier category, brand and company. It pri
 
 All demo repayments use a 30-day tenure and a `[DEMO] Notice Retailer` (01700000990). Re-running the seeder moves the dates so the DPDs are exact again, reopens the repayments and **deletes the demo suppliers' notice logs**, so every run starts from a clean cycle.
 
-### 6.2 SMS
+### 7.2 SMS
 
 ```bash
 php artisan suppliers:send-repayment-sms --dry-run
@@ -480,7 +535,7 @@ Supplier #11 notice_1_sms: dry_run
 
 Run it again: `0 SMS logged` (deduplicated). Open `/supplier-notice-logs?channel=sms` to read the exact Bangla texts. Only run without `--dry-run` locally if you really want SMS sent to the demo numbers.
 
-### 6.3 Profile and PDFs
+### 7.3 Profile and PDFs
 
 1. Log in to the dashboard, open `/suppliers?dpd=15` and open `[DEMO] Verified - DPD 15`.
 2. The "Repayment Status" card shows DPD 15, the due date, the DPD 90 date and one invoice. Click **Download Legal Notice (প্রথম নোটিশ)**. The PDF has the letterhead, a notice number like `HTL/LN1/2026/000NN`, today's date, the recipient block, the invoice table, the total and the DPD 90 date.
@@ -497,7 +552,7 @@ Run it again: `0 SMS logged` (deduplicated). Open `/supplier-notice-logs?channel
 
 8. Error cases: `/suppliers/{DPD 15 id}/legal-notice/2` → 422; `/suppliers/{not-verified id}/legal-notice/1` → 403.
 
-### 6.4 List, filter and export
+### 7.4 List, filter and export
 
 | Filter | Demo suppliers shown |
 | --- | --- |
@@ -508,7 +563,7 @@ Run it again: `0 SMS logged` (deduplicated). Open `/supplier-notice-logs?channel
 
 With a filter selected, click **Export Supplier Info**: the URL carries `?dpd=…` and the XLSX ends with the "DPD" column.
 
-### 6.5 Cycle reset (case b)
+### 7.5 Cycle reset (case b)
 
 ```php
 // tinker: mark every repayment of the DPD 60 + 20 + 5 supplier as repaid
@@ -518,7 +573,7 @@ DB::table('retailer_invoices')->whereIn('id', $ids)->update(['repayment_status' 
 
 Open the profile (or run the SMS command): the card shows "Not applicable yet", the log has a `cycle_reset` row and all earlier rows are marked "(resolved)". Set them back to `running` (or re-run the seeder): the supplier starts a new cycle, and the next download issues a new notice 3 number.
 
-### 6.6 Removing the demo data
+### 7.6 Removing the demo data
 
 ```php
 // php artisan tinker
